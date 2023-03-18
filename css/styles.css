@@ -118,7 +118,7 @@ img {
 .address-cont {
   display: none;
 }
-@media screen and (min-width: 786px){
+@media screen and (min-width: 768px) {
   .address-cont {
     display: flex;
   }
@@ -128,7 +128,7 @@ img {
   display: none;
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .contacts-list {
     display: flex;
     flex-direction: column;
@@ -143,13 +143,14 @@ img {
     justify-content: flex-end;
     gap: 40px;
     padding: 0;
+    margin-left: 332px;
   }
 }
 .burger-button {
   border: none;
   background-color: var(--white);
 }
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .burger-button {
     display: none;
   }
@@ -164,41 +165,41 @@ img {
 
 .mobile-menu {
   width: 100%;
-  max-width: 480px;
-  position:fixed;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  background-color:var(--white);
-  transform:translateX(100%);
+  background-color: var(--white);
+  transform: translateX(100%);
   transition: 1s;
   padding: 80px 0 40px 40px;
-  
 }
-.mobile-menu.js-menu-container{
+.mobile-menu,
+.js-menu-container,
+.is-open {
   width: 100%;
 }
-.mobile-menu.is-open{
-  transform:translateX(0);
+.mobile-menu.is-open {
+  transform: translateX(0);
   width: 100%;
 }
-.nav-menu{
+.nav-menu {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 40px;
   width: 360px;
 }
-.menu-navigation{
-font-weight: 700;
-font-size: 36px;
-line-height:1.1;
-letter-spacing: 0.02em;
-text-transform: capitalize;
-color: var(--dark);
-text-decoration: none;
+.menu-navigation {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--dark);
+  text-decoration: none;
 }
-.button-close-menu{
+.button-close-menu {
   position: absolute;
   right: 24px;
   top: 24px;
@@ -211,7 +212,7 @@ text-decoration: none;
   justify-content: center;
   align-items: center;
 }
-.svg-close-menu{
+.svg-close-menu {
   width: 8px;
   height: 8px;
 }
@@ -220,14 +221,14 @@ text-decoration: none;
   padding-bottom: 24px;
   padding-top: 24px;
 }
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .contacts-list > li {
     padding: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts-list > li {
-    padding-top:  24px;
+    padding-top: 24px;
   }
 }
 .contacts {
@@ -250,7 +251,6 @@ text-decoration: none;
   color: var(--pressed-state);
 }
 .main-header {
-  margin: 0 auto;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
@@ -258,6 +258,35 @@ text-decoration: none;
   width: 550px;
   text-align: center;
   margin-bottom: 48px;
+  margin: 0 auto;
+}
+.main-header {
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--white);
+  margin-bottom: 72px;
+  width: auto;
+}
+@media screen and (min-width: 768px) {
+  .main-header {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-header {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 48px;
+    width: 550px;
+  }
 }
 .order {
   background: var(--primary-brand);
@@ -281,35 +310,106 @@ text-decoration: none;
 .order:focus {
   background: var(--pressed-state);
 }
-.advanteges-list,
+
 .wp-img,
-.portolio-butt,
-.personal {
+.portolio-butt {
   list-style: none;
   display: flex;
   justify-content: center;
+  
   gap: 24px;
 }
-
+.personal {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  justify-content: center;
+  list-style: none;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .personal {
+    display: flex;
+    flex-direction: row;
+    gap: 64px 24px;
+    flex-wrap: wrap;
+    
+  }
+}
+@media screen and (min-width: 1200px) {
+  .personal {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+  }
+}
+.advanteges-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+@media screen and (min-width: 768px) {
+  .advanteges-list {
+    display: flex;
+    flex-direction: row;
+    gap: 72px 24px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advanteges-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+}
 .advant-header {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: var(--dark);
   margin-bottom: 8px;
 }
+@media screen and (min-width: 768px) {
+  .advant-header {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advant-header {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
 .advant-text {
-  flex-basis: calc((100% - 3 * 24px) / 4);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text);
 }
-.advanteges-li {
-  flex-basis: calc((100% - 3 * 24px) / 4);
-  max-width: 264px;
+@media screen and (min-width: 1200px) {
+  .advant-text {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advanteges-li {
+    flex-basis: calc((100% - 1 * 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advanteges-li {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    max-width: 264px;
+  }
 }
 .header-proc,
 .header-team {
@@ -342,7 +442,7 @@ text-decoration: none;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-ul.personal > li {
+.worker {
   background: var(--white);
   flex-basis: calc((100% - 3 * 24px) / 4);
   max-width: 264px;
@@ -350,6 +450,15 @@ ul.personal > li {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+@media screen and (min-width: 768px) {
+  .worker { flex-basis: calc((100% - 1 * 24px) / 2);
+  }
+}
+@media screen and (min-width: 1200px){
+  .worker{
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  max-width: 264px;
+}}
 
 .footer {
   background-color: var(--dark);
@@ -434,11 +543,16 @@ ul.personal > li {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (min-width: 1200px) {
+  .container.header-cont {
+    justify-content: flex-start;
+  }
+}
 
 .nav-header {
   display: none;
 }
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .nav-header {
     display: flex;
     justify-content: flex-start;
@@ -448,21 +562,38 @@ header {
   border-bottom: 1px solid #e7e9fc;
 }
 .section.process {
-  padding-bottom: 120px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .section.process {
+    display: block;
+    padding-bottom: 120px;
+  }
 }
 .section.item {
-  padding-top: 188px;
-  padding-bottom: 188px;
   background-color: var(--hero-background);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url("../images/peopleoffice.jpg");
+  padding-top: 112px;
+  padding-bottom: 112px;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  max-width: 1440px;
-  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .section.item {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 .section.features {
   padding-top: 120px;
@@ -512,23 +643,31 @@ button:hover {
   background-color: var(--pressed-state);
   color: var(--white);
 }
-.advanteges-list {
+.advanteges-list-svg {
   list-style: none;
   display: flex;
+  gap: 24px;
   margin-bottom: 8px;
-}
-.advanteges-item {
-  background: var(--light);
-  border-radius: 4px;
-  flex-basis: calc((100% - 3 * 24px) / 4);
-  height: 112px;
-  display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.advanteges-item {
+  display: none;
 }
 .advanteges-svg {
   width: 64px;
   height: 64px;
+}
+@media screen and (min-width: 1200px) {
+  .advanteges-item {
+    background: var(--light);
+    border-radius: 4px;
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .social-list {
