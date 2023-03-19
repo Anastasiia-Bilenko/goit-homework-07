@@ -44,8 +44,12 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 76px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    padding: 24px 0;
+    display: block;
+  }
 }
 
 .logo-web {
@@ -63,12 +67,12 @@ img {
   color: var(--dark);
   text-decoration: none;
   list-style: none;
-  padding-bottom: 24px;
-  padding-top: 24px;
   position: relative;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 24px 0;
+  display: block;
 }
 .navigation:hover,
 .navigation:focus {
@@ -104,14 +108,25 @@ img {
 }
 .stud-portf-con {
   display: flex;
-  justify-content: flex-start;
   gap: 40px;
   text-decoration: none;
   list-style: none;
 }
+
+@media screen and (min-width: 768px) {
+  .stud-portf-con {
+    align-items: center;
+  }
+}
+
 .stud-portf-con > li {
   padding-bottom: 24px;
   padding-top: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .stud-portf-con > li {
+    padding: 0;
+  }
 }
 .navigation:active {
   color: var(--pressed-state);
@@ -133,8 +148,8 @@ img {
   .contacts-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding: 16px 0;
+    gap: 4px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -277,27 +292,25 @@ img {
   color: var(--text);
   font-style: normal;
   text-decoration: none;
-  padding-bottom: 24px;
-  padding-top: 24px;
   position: relative;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contacts {
+    font-size: 12px;
+    line-height: 1.16px;
+    letter-spacing: 0.04em;
+  }
+}
+
 .contacts:hover,
 .contacts:focus {
   color: var(--pressed-state);
 }
-.main-header {
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  color: var(--white);
-  width: 550px;
-  text-align: center;
-  margin-bottom: 48px;
-  margin: 0 auto;
-}
+
 .main-header {
   margin: 0 auto;
   font-weight: 700;
@@ -598,6 +611,7 @@ img {
 .container.header-cont {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 @media screen and (min-width: 1200px) {
   .container.header-cont {
@@ -643,12 +657,12 @@ header {
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    .section.item {
-      background-image: linear-gradient(
+  .section.item {
+    background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/people-office@2x.jpg');
+      url("../images/people-office@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -922,10 +936,9 @@ button:hover {
   .container.footer {
     display: flex;
     flex-direction: row;
-    align-items: flex -start;
+    align-items: baseline;
     gap: 0;
-    justify-content: space-between;
-    padding: 0;
+    padding: 0 15px;
   }
 }
 
@@ -937,6 +950,16 @@ button:hover {
 @media screen and (min-width: 768px) {
   .logo-and-text {
     align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo-and-text {
+    margin-right: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .div-social-list {
+    margin-right: 80px;
   }
 }
 
@@ -1020,8 +1043,7 @@ button:hover {
   padding-top: 72px;
   padding-bottom: 24px;
 }
-@media screen and (min-width:768px)
- {
+@media screen and (min-width: 768px) {
   .modal {
     width: 408px;
   }
@@ -1193,7 +1215,7 @@ label {
   position: absolute;
   left: 40px;
 }
-@media screen and (min-width: 387px)  {
+@media screen and (min-width: 387px) {
   .svg-person {
     top: 141px;
   }
@@ -1205,10 +1227,10 @@ label {
   position: absolute;
   left: 40px;
 }
-@media screen and (min-width: 387px){
-.svg-phone {
-top: 204px;
-}
+@media screen and (min-width: 387px) {
+  .svg-phone {
+    top: 204px;
+  }
 }
 .svg-email {
   width: 18px;
@@ -1217,7 +1239,7 @@ top: 204px;
   position: absolute;
   left: 40px;
 }
-@media screen and (min-width: 387px){
+@media screen and (min-width: 387px) {
   .svg-email {
     top: 270px;
   }
