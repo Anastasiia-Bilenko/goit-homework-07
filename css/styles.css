@@ -119,15 +119,6 @@ img {
   }
 }
 
-.stud-portf-con > li {
-  padding-bottom: 24px;
-  padding-top: 24px;
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .stud-portf-con > li {
-    padding: 0;
-  }
-}
 .navigation:active {
   color: var(--pressed-state);
 }
@@ -270,20 +261,7 @@ img {
   text-decoration: none;
 }
 
-.contacts-list > li {
-  padding-bottom: 24px;
-  padding-top: 24px;
-}
-@media screen and (min-width: 768px) {
-  .contacts-list > li {
-    padding: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contacts-list > li {
-    padding-top: 24px;
-  }
-}
+
 .contacts {
   font-weight: 400;
   font-size: 16px;
