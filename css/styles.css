@@ -218,7 +218,7 @@ img {
   justify-content: center;
   align-items: center;
 }
-.social-list-menu{
+.social-list-menu {
   display: flex;
   list-style: none;
   justify-content: space-between;
@@ -577,10 +577,23 @@ img {
   overflow: hidden;
 }
 .container {
-  width: 100%;
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
+  max-width: 428px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
 }
 .container.header-cont {
   display: flex;
@@ -627,6 +640,17 @@ header {
   background-repeat: no-repeat;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .section.item {
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/people-office@2x.jpg');
+  }
+}
 @media screen and (min-width: 1200px) {
   .section.item {
     padding-top: 188px;
@@ -650,6 +674,11 @@ header {
   padding-top: 120px;
   padding-bottom: 120px;
   background-color: var(--light);
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  .section.team {
+    padding: 96px 108px;
+  }
 }
 
 .li-project {
@@ -978,7 +1007,7 @@ button:hover {
 .modal {
   width: 100%;
   height: 100%;
-  max-width: 408px;
+  max-width: 392px;
   max-height: 584px;
   background-color: var(--background-primary);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -990,6 +1019,12 @@ button:hover {
   padding: 0 24px;
   padding-top: 72px;
   padding-bottom: 24px;
+}
+@media screen and (min-width:768px)
+ {
+  .modal {
+    width: 408px;
+  }
 }
 .modal-close {
   position: absolute;
@@ -1154,23 +1189,38 @@ label {
 .svg-person {
   width: 18px;
   height: 18px;
-  top: 141px;
+  top: 165px;
   position: absolute;
   left: 40px;
+}
+@media screen and (min-width: 387px)  {
+  .svg-person {
+    top: 141px;
+  }
 }
 .svg-phone {
   width: 18px;
   height: 24px;
-  top: 204px;
+  top: 228px;
   position: absolute;
   left: 40px;
+}
+@media screen and (min-width: 387px){
+.svg-phone {
+top: 204px;
+}
 }
 .svg-email {
   width: 18px;
   height: 24px;
-  top: 270px;
+  top: 294px;
   position: absolute;
   left: 40px;
+}
+@media screen and (min-width: 387px){
+  .svg-email {
+    top: 270px;
+  }
 }
 
 .modal-input:focus + .modal-svg {
